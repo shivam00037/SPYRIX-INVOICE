@@ -1,15 +1,18 @@
 {
-  "name": "spyrix-invoice-mongodb",
+  "name": "spyrix-invoice-server",
   "version": "1.0.0",
   "private": true,
-  "description": "SPYRIX INVOICE business management workspace with login-required auth, page-per-folder React frontend, Express and MongoDB.",
-  "scripts": {
-    "dev": "node scripts/dev.js",
-    "dev:client": "npm --prefix client run dev",
-    "dev:server": "npm --prefix server run dev",
-    "build": "npm --prefix client run build",
-    "start": "npm --prefix server start",
-    "postinstall": "npm install --prefix client && npm install --prefix server"
+  "type": "module",
+  "scripts": { "dev": "nodemon src/server.js", "start": "node src/server.js" },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5"
   },
-  "devDependencies": {}
+  "devDependencies": { "nodemon": "^3.1.7" }
 }
